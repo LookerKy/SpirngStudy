@@ -12,6 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import springstudy.di.annot.Hello;
+import springstudy.di.annot.Printer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:config/annot.xml")
@@ -24,11 +25,12 @@ public class HelloBeanAnnotTest {
 	public void test() {
 		Hello hello = context.getBean("hello",Hello.class);
 		assertEquals("HelloSpring", hello.sayHello());
-		
+		hello.print();
 		List<String> list = hello.getNames();
 		for (String string : list) {
 			System.out.println(string);
 		}
-		
+		Printer printer = context.getBean("stringPrinter",Printer.class);
+		System.out.println(printer.toString());
 	}
 }
