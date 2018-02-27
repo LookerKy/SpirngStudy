@@ -67,10 +67,12 @@ public class UserDaoImplJDBC implements UserDao {
 	}
 
 	//@Override
-	public void update(UserVO user) {
-		String SQL = "update users  set name = ?, gender = ?, city = ? where userid = ?"; 
-		jdbcTemplate.update(SQL, user.getName(), user.getGender(), user.getCity(),user.getUserId()); 
-		System.out.println("갱신된 Record with ID = " + user.getUserId() ); 
+	public int update(UserVO user) {
+		StringBuffer updateQuery = new StringBuffer();
+		updateQuery.append("update users set name = ?, gender = ?, city = ? where userid = ?"); 
+		int result = this.jdbcTemplate.update(updateQuery.toString(), user.getName(), user.getGender(), user.getCity(),user.getUserId()); 
+		System.out.println("갱신된 Record with ID = " + user.getUserId() );
+		return  result;//반영된 레코드를 반환
 	}
 
 

@@ -11,7 +11,7 @@ public interface UserDao {
 
 	public List<UserVO> readAll();
 
-	public void update(UserVO user);
+	public int update(UserVO user);
 
 	public void delete(String id);
 
