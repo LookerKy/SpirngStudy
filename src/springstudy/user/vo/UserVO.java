@@ -1,4 +1,4 @@
-package springstudy.vo; 
+package springstudy.user.vo; 
 
 public class UserVO {
 

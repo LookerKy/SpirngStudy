@@ -1,8 +1,8 @@
-package springstudy.dao;
+package springstudy.user.dao;
 
 import java.util.List;
 
-import springstudy.vo.UserVO;
+import springstudy.user.vo.UserVO;
 
 
 

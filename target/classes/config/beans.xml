@@ -7,6 +7,15 @@
 	
 	<!-- namespace에서 context 선택 후 properties파일 경로 설정 -->
 	<context:property-placeholder location="classpath:config/value.properties"/>
+	<!-- component scan 설정 -->
+	<context:component-scan base-package="springstudy.user"/>
+	<!-- DataSource 설정 -->
+	<bean id ="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="${db.driverClass}"/>
+		<property name="url" value="${db.url}"/>
+		<property name="username" value="${db.username}"/>
+		<property name="password" value="${db.password}"/>
+	</bean>
 	
 	<bean id="hello2" class="springstudy.di.xml.Hello">
 		<!-- index 속성 대신 name 속성을 가지고 사용할 수 도있다 이때 name 은 파라미터의 변수 명으로 사용하면 된다. -->

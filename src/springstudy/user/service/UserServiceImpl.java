@@ -1,12 +1,12 @@
-package springstudy.service;
+package springstudy.user.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import springstudy.dao.UserDao;
-import springstudy.vo.UserVO;
+import springstudy.user.dao.UserDao;
+import springstudy.user.vo.UserVO;
 
 
 

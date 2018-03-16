@@ -1,4 +1,4 @@
-package springstudy.dao;
+package springstudy.user.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.*;
 import org.springframework.stereotype.Repository;
 
-import springstudy.vo.UserVO;
+import springstudy.user.vo.UserVO;
 
 
 @Repository("userDao")

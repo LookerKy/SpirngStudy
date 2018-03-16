@@ -1,8 +1,8 @@
-package springstudy.service;
+package springstudy.user.service;
 
 import java.util.List;
 
-import springstudy.vo.UserVO;
+import springstudy.user.vo.UserVO;
 
 
 public interface UserService {
