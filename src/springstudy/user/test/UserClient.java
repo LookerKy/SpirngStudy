@@ -24,7 +24,7 @@ public class UserClient {
 	@Autowired
 	UserService service;
 	
-	@Test
+	@Test @Ignore
 	public void dataSourceTest() {
 		DataSource ds = (DataSource)context.getBean("dataSource");
 		try {
@@ -34,7 +34,7 @@ public class UserClient {
 			e.printStackTrace();
 		}
 	}
-	@Test @Ignore
+	@Test
 	public void getUserTest() {
 		UserVO user = service.getUser("gildong");
 		System.out.println(user);
@@ -62,7 +62,7 @@ public class UserClient {
 		System.out.println(user);
 	}
 	
-	@Test
+	@Test @Ignore
 	public void deleteUserTest() {
 		service.deleteUser("dooly");
 		
